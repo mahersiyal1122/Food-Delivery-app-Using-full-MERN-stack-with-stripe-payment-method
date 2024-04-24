@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #fcfcfc;
+    min-height: 100vh;
+}
+hr{
+    border: none;
+    height: 1px;
+    background-color: #a9a9a9;
+}
+
+@layer components {
+    .sidebar_options{
+        @apply flex items-center gap-3 border border-[#a9a9a9] border-r-0 p-[8px_10px] rounded-[4px_0px_0px_4px] cursor-pointer
+    }
+    .sidebar_options.active{
+        @apply bg-[#fff0ed] border-[tomato]
+    }
+}

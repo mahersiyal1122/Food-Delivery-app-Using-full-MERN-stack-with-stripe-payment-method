@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    scroll-behavior: smooth;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@layer base {
+    h1 {
+        @apply text-[2em] font-bold
+    }
+    h2 {
+        @apply text-[1.5em] font-bold
+    }
+    h3 {
+        @apply text-[1.17em] font-bold
+    }
+    h4 {
+        @apply text-[1.33em] font-bold
+    }
+}
+
+@layer components {
+    .navMenu_underline{
+        @apply pb-[2px] border-b-[2px] border-b-[#49557e] cursor-pointer
+    }
+    .navCart_dot{
+        @apply absolute min-w-[10px] min-h-[10px] bg-[tomato] rounded-full top-[-8px] right-[-8px] max-[950px]:min-w-[8px] max-[950px]:min-h-[8px] max-[950px]:top-[-6px] max-[950px]:right-[-6px] max-[400px]:min-w-[6px] max-[400px]:min-h-[6px] max-[400px]:top-[-5px] max-[400px]:right-[-5px]
+    }
+    .nav-profile:hover .nav-profile-dropdown{
+        @apply flex flex-col gap-[10px] bg-black p-[12px_45px] rounded border border-[tomato] text-white 
+    }
+}
+
+
+/* explore Menu */
+.menu-list::-webkit-scrollbar{
+    display: none;
+}

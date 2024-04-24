@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .cart_items{
+        @apply grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr] items-center text-[grey] text-[max(1vw,12px)] max-[430px]:grid-cols-[1fr_1.5fr_1fr_1fr]
+    }
+    .cart-total-details{
+        @apply flex justify-between text-[#555]
+    }
+    .cart-total-proceed{
+        @apply text-white bg-[tomato] w-[max(16vw,200px)] p-[10px_0px] rounded cursor-pointer text-sm
+    }
+    .cart-promo-code-input{
+        @apply mt-[10px] flex justify-between items-center bg-[#eaeaea] rounded
+    }
+    .cart-promo-code-input button{
+        @apply w-[max(10vw,150px)] p-[12px_5px] bg-black text-white border-none rounded
+    }
+    .placeorder-left input{
+        @apply mb-[15px] w-full p-[10px] border border-[#c5c5c5] rounded outline-[tomato]
+    }
+    .placeorder-multi-input{
+        @apply flex gap-[10px]
+    }
+    .verify{
+        @apply min-h-[60vh] grid
+    }
+    .spinner{
+        @apply w-[100px] h-[100px] place-self-center border-[5px] border-[#bdbdbd] rounded-[50%] border-t-[tomato] animate-[rotate_2s_infinite]
+    }
+    .ordersroll:hover .ordersroll-abs{
+        @apply block 
+    }
+}
+
+@keyframes rotate {
+    100%{
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(-360deg);
+    }
+    0%{
+        transform: rotate(360deg);
+    }
+}
+
+.ordersroll-abs::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
